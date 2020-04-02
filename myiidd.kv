@@ -1,0 +1,307 @@
+#:kivy 1.11.1
+#:import FadeTransition kivy.uix.screenmanager.FadeTransition
+MyScreenManager:
+    transition: FadeTransition()
+    MainScreen:
+    LoginScreen:
+    DronePilotTrainingScreen:
+    WeatherScreen:
+    DroneInsuranceScreen:
+    OnlineTestScreen:
+    FlyZonesScreen:
+    DroneServiceCentreScreen:
+    DroneStoreScreen:
+    MoreScreen:
+    TermsAndConditionsScreen:
+    AboutUsScreen:
+    FAQsScreen:
+    DroneNewsScreen:
+    DroneCinemaScreen:
+    MappingDronesScreen:
+    AgricultureDronesScreen:
+    DefenceDronesScreen:
+    KnowBeforeYouFlyScreen:
+    DroneGlossaryScreen:
+    DGCAScreen
+    IIDPilotListScreen:
+<LoginScreen>:
+    name: 'login'
+    ActionBar1:
+    Label:
+        text: 'LoginScreen'
+        font_size: 30
+<DronePilotTrainingScreen>:
+    name: 'drone_pilot_training'
+    ActionBar1:
+    Label:
+        text: 'DronePilotTrainingScreen'
+        font_size: 30
+<WeatherScreen>:
+    name: 'weather'
+    ActionBar1:
+    Label:
+        text: 'WeatherScreen'
+        font_size: 30
+<DroneInsuranceScreen>:
+    name: 'drone_insurance'
+    ActionBar1:
+    Label:
+        text: 'DroneInsuranceScreen'
+        font_size: 30
+<OnlineTestScreen>:
+    name: 'online_test'
+    ActionBar1:
+    Label:
+        text: 'OnlineTestScreen'
+        font_size: 30
+<FlyZonesScreen>:
+    name: 'fly_zones'
+    ActionBar1:
+    Label:
+        text: 'FlyZonesScreen'
+        font_size: 30
+<DroneServiceCentreScreen>:
+    name: 'drone_service_centre'
+    ActionBar1:
+    Label:
+        text: 'DroneServiceCentreScreen'
+        font_size: 30
+<DroneStoreScreen>:
+    name: 'drone_store'
+    ActionBar1:
+    Label:
+        text: 'DroneStoreScreen'
+        font_size: 30
+
+<TermsAndConditionsScreen>:
+    name: 'terms_and_conditions'
+    ActionBar1:
+    Label:
+        text: 'TermsAndConditionsScreen'
+        font_size: 30
+<AboutUsScreen>:
+    name: 'about_us'
+    ActionBar1:
+    Label:
+        text: 'AboutUsScreen'
+        font_size: 30
+<FAQsScreen>:
+    name: 'faqs'
+    ActionBar1:
+    Label:
+        text: 'FAQsScreen'
+        font_size: 30
+<DroneNewsScreen>:
+    name: 'dronenews'
+    ActionBar2:
+    Label:
+        text: 'DroneNewsScreen'
+        font_size: 30
+<DroneCinemaScreen>:
+    name: 'dronecinema'
+    ActionBar2:
+    Label:
+        text: 'DroneCinemaScreen'
+        font_size: 30
+<MappingDronesScreen>:
+    name: 'mappingdrones'
+    ActionBar2:
+    Label:
+        text: 'MappingDronesScreen'
+        font_size: 30
+<AgricultureDronesScreen>:
+    name: 'agriculturedrones'
+    ActionBar2:
+    Label:
+        text: 'AgricultureDronesScreen'
+        font_size: 30
+<DefenceDronesScreen>:
+    name: 'defencedrones'
+    ActionBar2:
+    Label:
+        text: 'DefenceDronesScreen'
+        font_size: 30
+<KnowBeforeYouFlyScreen>:
+    name: 'knowbeforeyoufly'
+    ActionBar2:
+    Label:
+        text: 'KnowBeforeYouFlyScreen'
+        font_size: 30
+<DroneGlossaryScreen>:
+    name: 'droneglossary'
+    ActionBar2:
+    Label:
+        text: 'DroneGlossaryScreen'
+        font_size: 30
+<IIDPilotListScreen>:
+    name: 'iidpilotlist'
+    ActionBar2:
+    Label:
+        text:'IIDPilotListScreen'
+        font_size: 30
+<DGCAScreen>:
+    name: 'dgca'
+    ActionBar2:
+    Label:
+        text: 'DGCAScreen'
+        font_size: 30
+<ActionBar1>:
+    ActionBar:
+        top: root.top
+        size: root.width, 120
+        ActionView:
+            use_separator: True
+            separator_width: 20
+            ActionPrevious:
+                title: 'IID App'
+                with_previous: True
+                markup: False
+                on_release: app.root.current = "main"
+            #ActionGroup:
+            #    text: 'Group 1'
+             #   ActionButton:
+             #       text: 'Btn2'
+              #  ActionButton:
+               #     text: 'Btn3'
+               # ActionButton:
+               #     text: 'Btn4'
+            ActionOverflow:
+                ActionButton:
+                    text: 'T & Cs'
+                    on_release: app.root.current = "terms_and_conditions"
+                ActionButton:
+                    text: 'About Us'
+                    on_release: app.root.current = "about_us"
+                ActionButton:
+                    text: 'FAQs'
+                    on_release: app.root.current = "faqs"
+
+<ActionBar2>:
+    ActionBar:
+        top: root.top
+        size: root.width, 120
+        ActionView:
+            use_separator: True
+            separator_width: 20
+            ActionPrevious:
+                title: 'IID App'
+                with_previous: True
+                markup: False
+                on_release: app.root.current = "more"
+
+            ActionOverflow:
+                ActionButton:
+                    text: 'T & Cs'
+                    on_release: app.root.current = "terms_and_conditions"
+                ActionButton:
+                    text: 'About Us'
+                    on_release: app.root.current = "about_us"
+                ActionButton:
+                    text: 'FAQs'
+                    on_release: app.root.current = "faqs"
+<MainScreen>:
+    name: 'main'
+    ActionBar:
+        top: root.top
+        size: root.width, 100
+        ActionView:
+            use_separator: True
+            separator_width: 5
+            markup: True
+            #SearchBar:
+              #  on_text_validate: self.search()
+            ActionPrevious:
+                title: 'IID App'
+                with_previous: False
+            ActionButton:
+                text: 'Settings'
+                on_release: app.open_settings()
+            ActionOverflow:
+                ActionButton:
+                    text: 'T & Cs'
+                    on_release: app.root.current = "terms_and_conditions"
+                ActionButton:
+                    text: 'About Us'
+                    on_release: app.root.current = "about_us"
+                ActionButton:
+                    text: 'FAQs'
+                    on_release: app.root.current = "faqs"
+
+    GridLayout:
+        size: root.width, root.height
+        padding:50, 180, 50, 80
+        spacing:10,10
+        cols: 3
+        Buttonmain:
+            text:"Login"
+            on_release: app.root.current = "login"
+        Buttonmain:
+            text:"Drone\nPilot\nTraining"
+            on_release: app.root.current = "drone_pilot_training"
+        Buttonmain:
+            text:"Weather"
+            on_release: app.root.current = "weather"
+        Buttonmain:
+            text:"Drone\nInsurance"
+            on_release: app.root.current = "drone_insurance"
+        Buttonmain:
+            text:"IID\nOnline\nTest"
+            on_release: app.root.current = "online_test"
+        Buttonmain:
+            text:"Fly\nZones"
+            on_release: app.root.current = "fly_zones"
+        Buttonmain:
+            text:"Drone\nService\nCentre"
+            on_release: app.root.current = "drone_service_centre"
+        Buttonmain:
+            text:"Drone\nStore"
+            on_release: app.root.current = "drone_store"
+        Buttonmain:
+            text:"More"
+            on_release: app.root.current = "more"
+<Buttonmain>:
+    markup:True
+    background_normal: ""
+    background_color:(0,0,0,0)
+    canvas.before:
+        Color:
+            rgba: (.4,.4,.4,1) if self.state=='normal' else (0,.7,.7,1)  # visual feedback of press
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [10,]
+<MoreScreen>:
+    name: 'more'
+    ActionBar1:
+    GridLayout:
+        size: root.width, root.height
+        padding:50, 180, 50, 80
+        spacing:10,10
+        cols: 3
+        Button:
+            text:"drone\nnews"
+            on_release: app.root.current = "dronenews"
+        Button:
+            text:"Drone\nCinema"
+            on_release: app.root.current = "dronecinema"
+        Button:
+            text:"Mapping\nDrones"
+            on_release: app.root.current = "mappingdrones"
+        Button:
+            text:"Agriculture\nDrones"
+            on_release: app.root.current = "agriculturedrones"
+        Button:
+            text:"Defence\nDrones"
+            on_release: app.root.current = "defencedrones"
+        Button:
+            text:"Know\nBefore\nYou\nFly"
+            on_release: app.root.current = "knowbeforeyoufly"
+        Button:
+            text:"Drone\nGlossary"
+            on_release: app.root.current = "droneglossary"
+        Button:
+            text:"IID\nPilot\nList"
+            on_release: app.root.current = "iidpilotlist"
+        Button:
+            text:"DGCA"
+            on_release: app.root.current = "dgca"
